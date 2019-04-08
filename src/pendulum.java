@@ -1,4 +1,4 @@
-package pendulum;
+//package pendulum;
 
 import java.awt.*;
 import javax.swing.*;
@@ -36,7 +36,8 @@ public class pendulum extends JPanel implements Runnable
         g.drawString("T = " + time + "s", 10, 20);
     }
  
-    public void run() {
+    public void run() 
+    {
         double angleAccel, angleVelocity = 0, dt = 0.1;
         while (true) {
             angleAccel = -grav * mass/ length * Math.sin(angle);

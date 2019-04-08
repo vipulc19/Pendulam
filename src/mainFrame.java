@@ -5,17 +5,17 @@ import java.awt.event.*;
 
 public class mainFrame extends JFrame 
 {
-    private JButton btnGo;
-    private ButtonGroup frameSelector;
-    private JPanel jPanel1;
-    private JLabel lblInput1,lblInput2,lblInput3,lblInput4;
-    private JPanel pnlCVsT,pnlKEVsT,pnlModel,pnlOutput,pnlPEVsT,pnlTEVsT;
+    JButton btnGo;
+   	ButtonGroup frameSelector;
+    JPanel jPanel1;
+    JLabel lblInput1,lblInput2,lblInput3,lblInput4;
+    JPanel pnlCVsT,pnlKEVsT,pnlModel,pnlOutput,pnlPEVsT,pnlTEVsT;
    
-    private JRadioButton rdbCircle,rdbPendulum;
-    private JTabbedPane tbGraphs;
-    private JTextField txtInput1,txtInput2,txtInput3,txtInput4;
+    JRadioButton rdbCircle,rdbPendulum;
+    JTabbedPane tbGraphs;
+    JTextField txtInput1,txtInput2,txtInput3,txtInput4;
 
-    private pendulum.pendulum pnlPendulum;
+    private pendulum pnlPendulum;
     
     private circularMotion.Circle pnlCircle;
     private circularMotion.pnlCOutput pnlCOutput;
@@ -29,7 +29,7 @@ public class mainFrame extends JFrame
     int input2;
     int input3;
     double input4;
-    /** Creates new form mainFrame */
+    
     public mainFrame() 
     {
         initComponents();
@@ -132,7 +132,7 @@ public class mainFrame extends JFrame
 
         lblInput1.getAccessibleContext().setAccessibleName("gravitation");
 
-        pnlModel.setMinimumSize(new java.awt.Dimension(300, 300));
+        pnlModel.setMinimumSize(new Dimension(300, 300));
 
         GroupLayout pnlModelLayout = new GroupLayout(pnlModel);
         pnlModel.setLayout(pnlModelLayout);
@@ -351,7 +351,7 @@ public class mainFrame extends JFrame
             pnlModel.remove(pnlCircle);
         }
         
-        pnlPendulum = new pendulum.pendulum(input2,input1,input3);
+        pnlPendulum = new pendulum(input2,input1,input3);
         pnlPendulum.pendulamThread(input2,input1,input3);
         pnlPendulum.setSize(pnlModel.getWidth(), pnlModel.getHeight());
         pnlModel.add(pnlPendulum);
