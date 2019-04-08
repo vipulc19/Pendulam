@@ -2,8 +2,10 @@ package graphs;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.geom.*;
+import javax.swing.*;
 
-public class PEVsT extends javax.swing.JPanel {
+public class PEVsT extends javax.swing.JPanel 
+{
 
     Stroke drawingStroke = new BasicStroke(2);
     QuadCurve2D curve = new QuadCurve2D.Double(20,30,185,451,350,30);
@@ -11,7 +13,8 @@ public class PEVsT extends javax.swing.JPanel {
     double grav;
     int length, mass;
     double maxPotential;
-    public PEVsT(double grav, int length, int mass) {
+    public PEVsT(double grav, int length, int mass) 
+    {
         initComponents();
         this.grav = grav;
         this.length = length;
@@ -33,16 +36,10 @@ public class PEVsT extends javax.swing.JPanel {
         g.drawString("P.E", 177, 20);
         g.drawString("Time", 350, 255);
         
-        //double xRatio = 350/time;
-        //drow potential corve
+        //drow potential curve
         int x;
         double y;
-//        for(x=1; x<360; x+=1){
-//            y = 239-Math.pow(185-x, 2);//*xRatio;
-//            System.out.println(x + " " + y);
-//            g.fillOval(5*x-720, (int)y, 2, 2);
-//            //try{ Thread.sleep(10); } catch (InterruptedException ex) {}
-//        }
+
         Graphics2D ga = (Graphics2D)g;
         ga.setStroke(drawingStroke);
         ga.setPaint(Color.green);
@@ -57,20 +54,18 @@ public class PEVsT extends javax.swing.JPanel {
     }
     
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        GroupLayout layout = new GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
             .addGap(0, 300, Short.MAX_VALUE)
         );
-    }// </editor-fold>//GEN-END:initComponents
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    // End of variables declaration//GEN-END:variables
+    }
 }

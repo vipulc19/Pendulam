@@ -3,8 +3,8 @@ package pendulum;
 import java.awt.*;
 import javax.swing.*;
  
-public class pendulum extends JPanel implements Runnable {
- 
+public class pendulum extends JPanel implements Runnable 
+{
     private double angle = Math.PI / 4;
     private int length;
     private double grav;
