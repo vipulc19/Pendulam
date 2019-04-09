@@ -9,6 +9,7 @@ public class PEVsT extends javax.swing.JPanel
 
     Stroke drawingStroke = new BasicStroke(2);
     QuadCurve2D curve = new QuadCurve2D.Double(20,30,185,451,350,30);
+                        //ctrl x,ctrl y, x1(s),x2,y1(s),y2;
     
     double grav;
     int length, mass;
@@ -23,7 +24,8 @@ public class PEVsT extends javax.swing.JPanel
 
   
     @Override
-    public void paintComponent(Graphics g){
+    public void paintComponent(Graphics g)
+    {
         super.paintComponent(g);
         
         //set graph XY lines
@@ -55,8 +57,8 @@ public class PEVsT extends javax.swing.JPanel
     
     @SuppressWarnings("unchecked")
 
-    private void initComponents() {
-
+    private void initComponents() 
+    {
         GroupLayout layout = new GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(

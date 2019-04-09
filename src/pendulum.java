@@ -1,5 +1,3 @@
-//package pendulum;
-
 import java.awt.*;
 import javax.swing.*;
  
@@ -39,7 +37,8 @@ public class pendulum extends JPanel implements Runnable
     public void run() 
     {
         double angleAccel, angleVelocity = 0, dt = 0.1;
-        while (true) {
+        while (true) 
+        {
             angleAccel = -grav * mass/ length * Math.sin(angle);
             angleVelocity += angleAccel * dt;
             angle += angleVelocity * dt;

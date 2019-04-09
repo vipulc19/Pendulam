@@ -41,7 +41,8 @@ public class Circle extends JPanel implements Runnable
     }
     
     @Override
-    public void run() {
+    public void run() 
+    {
         double centerAccel, Velocity = 10,dt=0.1;
         
         while(true){

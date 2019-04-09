@@ -30,11 +30,11 @@ public class pnlCOutput extends JPanel
     }
     
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents() 
+    {
 
-        jLabel1 = new javax.swing.JLabel();
-        lblOutput = new javax.swing.JLabel();
+        jLabel1 = new JLabel();
+        lblOutput = new JLabel();
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("T =");
